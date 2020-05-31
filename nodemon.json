@@ -1,0 +1,7 @@
+{
+    "env" : {
+        "MONGO_URL" : "mongodb+srv://fortune-root:Cn9lVr3qPcHVXhCc@cluster0-6nnwk.gcp.mongodb.net/test?retryWrites=true&w=majority",
+        "PORT": 3000,
+        "JWTKEY": "CFA5F2E5EADFD98CB5C7C8B75473785D"
+    }
+}

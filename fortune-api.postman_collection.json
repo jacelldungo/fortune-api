@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "8f9f210f-2378-4c70-8bde-9817f3b7e3bf",
+		"name": "fortune-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/fortune",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "355dcf8d-2985-40c7-b27c-c0d23788bd86",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphY2VsbGR1bmdvMjEzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiMzJiYzI1ZTEzNWFmOTA5YmM1YjEyMjQ2YTE5ZDNlYWQiLCJpYXQiOjE1OTA4OTc0MTN9.qPsEcDjuQ7oQTddb1lgNQGTB04bWnxTjO0xf35a6i-o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fortune\": \"The higher you fly the more you exceed\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/fortune",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fortune"
+					]
+				},
+				"description": "GET /fortune\n- To get random \nGET /fortune/:id\n- To get specific\nPATCH /fortune/:id\n- To Update fortune"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/users/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"\",\n\t\"password\": \"\",\n\t\"name\" : \"jal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						""
+					]
+				},
+				"description": "GET /users\n- Get all users list\nPOST /users\n- Add User\nGET /validatetoken\n- Check token validity\nPOST /auth\n- Authenticate user"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
